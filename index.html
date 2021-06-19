@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>TARJETAS DE CIRCUITOS INTEGRADOS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="images/icons96PWA.png">
+
+    <!-- Carga del CSS de "Bootstrap" -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Carga del CSS de "Font Awesome" -->
+    <link rel="stylesheet" href="css/all.css">
+
+     <!-- Carga del CSS de "Swiper" -->
+     <link rel="stylesheet" href="css/swiper.min.css">    
+
+    <!-- Color de la aplicación -->
+    <meta name="theme-color" content="#236467">
+
+    <!-- Optimización para movil -->
+    <meta name="MobileOptimized" content="width">  
+    <meta name="HandheldFriendly" content="true">  
+
+    <!-- Meta etiquetas PWA para Apple -->
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+    <link rel="apple-touch-icon" href="images/icons8-bios-96.png">
+    <link rel="apple-touch-startup-image" href="images/icons8-bios-96.png">
+
+    <!-- Configuración General PWA -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Carga del CSS personalizado -->
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="js/ejemplo.js"></script>
+    <script>
+    var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+    function init() {
+        canvas = document.getElementById("canvas");
+        anim_container = document.getElementById("animation_container");
+        dom_overlay_container = document.getElementById("dom_overlay_container");
+        var comp=AdobeAn.getComposition("1E03A66B4961574D8AF6EAF050075FCA");
+        var lib=comp.getLibrary();
+        handleComplete({},comp);
+    }
+    function handleComplete(evt,comp) {
+        //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+        var lib=comp.getLibrary();
+        var ss=comp.getSpriteSheet();
+        exportRoot = new lib.ejemplo();
+        stage = new lib.Stage(canvas);	
+        //Registers the "tick" event listener.
+        fnStartAnimation = function() {
+            stage.addChild(exportRoot);
+            createjs.Ticker.setFPS(lib.properties.fps);
+            createjs.Ticker.addEventListener("tick", stage);
+        }	    
+        //Code to support hidpi screens and responsive scaling.
+        AdobeAn.makeResponsive(true,'both',true,1,[canvas,anim_container,dom_overlay_container]);	
+        AdobeAn.compositionLoaded(lib.properties.id);
+        fnStartAnimation();
+    }
+    </script>
+
+
+</head>
+
+<body>
+    <body onload="init();" style="margin:0px;">
+
+    </section> 
+    <!-- Sección #menu-navegacion -->
+
+    <nav id="menu-navegacion" class="navbar navbar-dark bg-secondary navbar-expand-md">
+    <!-- <nav id="menu-navegacion" class="navbar navbar-dark navbar-expand-md" style="background-color:rgb(121, 134, 45);"> -->
+        <div class="container">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu-principal"
+                aria-expanded="false" aria-label="Botón Menú principal">
+                <span class="boton-menu"></span>
+            </button>
+            <a href="#" class="btn btn-primary order-md-1">Realizar un pedido</a>
+
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="navbar-nav mt-3 mt-md-0">
+                    <li class="nav-item mb-1 mb-md-0 mr-md-2"><a href="#animacion"
+                            class="nav-link active">Inicio</a></li>
+                    <li class="nav-item mb-1 mb-md-0 mr-md-2"><a href="#historia" class="nav-link">Historia</a></li>
+                    <!-- <li class="nav-item mb-1 mb-md-0 mr-md-2"><a href="#historia" class="nav-link text-primary">Historia</a></li> -->
+                    <li class="nav-item mb-1 mb-md-0 mr-md-2"><a href="#tecnicas" class="nav-link">Técnicas</a></li>
+                    <li class="nav-item mb-1 mb-md-0 mr-md-2"><a href="#fabricacion" class="nav-link">Fabricación</a></li> 
+                    <li class="nav-item mb-1 mb-md-0 mr-md-0"><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Sección #animacion -->
+    <section id="animacion" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide d-flex justify-content-center align-items-center"
+                style="background-image:url('images/imagesfondo-slide-1.jpg')">
+
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-9 col-sm-11">
+                            <h2 class="display-4 font-weight-bold">
+                                Imagen 01.
+                            </h2>
+                            <a href="#" class="btn btn-primary">Realizar un pedido</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="swiper-slide d-flex justify-content-center align-items-center"
+                style="background-image:url('images/imagesfondo-slide-2.jpg')">
+
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-9 col-sm-11">
+                            <h2 class="display-4 font-weight-bold">
+                                Imagen 02.
+                            </h2>
+                            <a href="#" class="btn btn-primary">Realizar un pedido</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide d-flex justify-content-center align-items-center"
+                style="background-image:url('images/imagesfondo-slide-3.jpg')">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-9 col-sm-11">
+                            <h2 class="display-4 font-weight-bold">
+                                Imagen 03
+                            </h2>
+                            <a href="#" class="btn btn-primary">Realizar un pedido</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Botones de navegación -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- Botones de paginación -->
+        <div class="swiper-pagination"></div>
+    </section>
+
+
+
+
+   <!-- Seccion #historia -->
+   <section id="historia" class="py-5 text-center">
+
+        <div class="container py-5">
+            <h2 class="display-4 font-weight-bold text-warning">HISTORIA Y RECONOCIMIENTOS</h2>
+            <h6 class="text-black-50">CERTIFICACIONES POR AÑO</h6>            
+        </div>
+    </section>    
+
+   <!-- Seccion #tecnicas -->
+   <section id="tecnicas" class="py-5 text-center">
+
+        <div class="container py-5">
+            <h2 class="display-4 font-weight-bold text-warning">DISEÑO VLSI</h2>
+            <h6 class="text-black-50">PROCESO</h6>            
+        </div>
+    </section>    
+
+   <!-- Seccion #fabricacion -->
+
+   <section id="fabricacion" class="py-5 text-center">
+        <div class="container py-5">
+            <h2 class="display-4 font-weight-bold text-warning">LABORATORIOS CERTIFICADOS</h2>
+            <h6 class="text-black-50">VISITA VIRTUAL</h6>    
+            
+            <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:800px; height:800px">
+                <canvas id="canvas" width="800" height="800" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+                <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:800px; height:800px; position: absolute; left: 0px; top: 0px; display: block;">
+                </div>
+            </div>
+        
+        </div>
+    </section>    
+
+   <!-- Seccion #contacto -->
+   <section id="contacto" class="py-5 text-center">
+
+        <div class="container py-5">
+            <h2 class="display-4 font-weight-bold text-warning">AQUI VAN NUESTROS FORMULARIOS</h2>
+            <h6 class="text-black-50">FORMULARIO</h6>            
+        </div>
+    </section>    
+
+
+    <!-- Carga de "Jquery" -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- Carga de "Popper" -->
+    <script src="js/popper.min.js"></script>
+
+    <!-- Carga de "Bootstrap" -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Carga de "Swiper" -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Carga de "Jquery Stickit.js" | Crean un encabezado fijo en la parte superior de la página-->
+    <script src="js/jquery.stickit.min.js"></script>
+
+    <!-- Carga de "page-scroll-to-id" | Crean el efecto de scroll entre los enlaces-->
+    <script src="js/jquery.malihu.PageScroll2id.min.js"></script>
+
+    <!-- Archivo para configurar e iniciar las funciones de los scripts -->
+    <script src="js/mis-scripts.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+@charset "UTF-8";
+/*----------------------------------------
+1. TIPOGRAFIA DEL SITIO
+-----------------------------------------*/
+html {
+  font-size: 13px; }
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #696969; }
+
+/*-----------------------------------------
+2. ESTILOS GENERALES DE BOTONES
+-------------------------------------------*/
+.btn {
+  border-radius: 2rem;
+  padding: .6rem 2rem;
+  font-weight: bold; }
+
+/*-----------------------------------------
+3. ESTILOS COLOR PRINCIPAL
+------------------------------------------*/
+.bg-primary {
+  background-color: #236467 !important; }
+
+.text-primary {
+  color: #236467 !important; }
+
+/*Estilos btn-primary*/
+.btn-primary {
+  color: #fff;
+  background-color: #236467;
+  border-color: #236467;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.btn-primary:hover {
+  color: #2D8633;
+  background-color: #fff;
+  border-color: #236467; }
+
+.btn-primary:active {
+  color: #2D8633 !important;
+  background-color: #29767a !important;
+  border-color: #30898d !important; }
+
+.btn-primary:focus {
+  color: #2D8633 !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(35, 100, 103, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(35, 100, 103, 0.5) !important; }
+
+/*Insertamos la flecha del boton principal*/
+.btn-primary:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f138";
+  position: relative;
+  left: .6rem;
+  top: .1rem;
+  -webkit-transition: left .3s ease;
+  transition: left .3s ease; }
+
+.btn-primary:hover:after,
+.btn-primary:focus:after,
+.btn-primary:active:after {
+  left: .25rem; }
+
+/*Insertamos la caja blanca del boton principal*/
+.btn-primary:before {
+  content: "";
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: skew(45deg, 0);
+          transform: skew(45deg, 0);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease; }
+
+.btn-primary:hover:before,
+.btn-primary:focus:before,
+.btn-primary:active:before {
+  width: 130%;
+  left: -15%; }
+
+/*-----------------------------------------
+4. ESTILOS COLOR SECUNDARIO
+------------------------------------------*/
+.bg-secondary {
+  background-color: #2D8633 !important; }
+
+.text-secondary {
+  color: #2D8633 !important; }
+
+/*-----------------------------------------
+6. ESTILOS PARA "#menu-navegacion"
+------------------------------------------*/
+/*Quitamos estilos al boton por defecto*/
+#menu-navegacion .navbar-toggler {
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  outline: 0; }
+
+/*Estilos boton del menu personalizado*/
+#menu-navegacion .boton-menu:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f0c9";
+  font-weight: 900;
+  color: #fff;
+  font-size: 2rem; }
+
+#menu-navegacion .icono-cerrar:before {
+  content: "\f00d";
+  position: relative;
+  left: .2rem; }
+
+/*Estilos de los enlace del #menu-navegacion*/
+.navbar-dark .navbar-nav .nav-link {
+  padding: 1rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: .5rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.navbar-dark .navbar-nav .nav-link:after {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f105";
+  font-weight: 900;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+/*Estilos estado hover de enlace*/
+.navbar-dark .navbar-nav .nav-link:hover {
+  background-color: #3aac42; }
+
+.navbar-dark .navbar-nav .nav-link:hover:after {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg); }
+
+/*Estilos para el enlace activo*/
+.navbar-dark .navbar-nav .nav-link.active {
+  background-color: #236467; }
+
+/*Clase cuando  la barra de navegación se fija a la parte superior*/
+.menu-fijo {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  background-color: #206024 !important;
+  width: 100% !important; }
+
+/*-----------------------------------------
+7. ESTILOS PARA "#animacion"
+------------------------------------------*/
+.swiper-slide {
+  height: 34rem;
+  /*450px*/
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center center; }
+
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  background: black;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .4; }
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.29);
+  width: 3rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease; }
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f060"; }
+
+.swiper-button-next::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+/*Estado Hover de los botones*/
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(0, 0, 0, 0.46);
+  color: #236467; }
+
+/*Estilos para el paginador*/
+.swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 .4rem !important; }
+
+.swiper-pagination-bullet-active {
+  background-color: #236467; }
+
+/*---------------------------------------------------
+X MEDIAS QUERIES
+---------------------------------------------------*/
+@media (min-width: 768px) {
+  .navbar-dark .navbar-nav .nav-link {
+    padding: .7rem 1.2rem;
+    border-radius: 1.5rem; }
+
+  .navbar-dark .navbar-nav .nav-link:after {
+    content: ""; } }
+@media (min-width: 990px) {
+  html {
+    font-size: 16px; }
+
+  .swiper-slide {
+    height: 37.5rem;
+    /*600px*/ } }
+@media (min-width: 1200px) {
+  .swiper-slide {
+    height: 44rem;
+    /*700px*/ } }
+
+/*# sourceMappingURL=estilos.css.map */

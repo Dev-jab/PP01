@@ -1,0 +1,65 @@
+{
+		"name": "TARJETAS DE CIRCUITOS INTEGRADOS",
+		"short_name":"VLSI",
+		"description": "Aplicación PWA del curso PAM-USB",
+		"background_color":"#2D8633",
+		"theme_color":"#236467",
+		"orientation":"portrait",
+		"display":"standalone",
+		"start_url": "./index.html?utm_source=web_app_manifest",
+		"scope":"./",
+		"lang":"es-ES",
+		"icons": [
+			// {
+			//     "src": "./images/favicon-1024.png",
+			//     "type": "image/png",
+			//     "sizes": "1024x1014"
+			// },
+			// {
+			//     "src": "./images/favicon-512.png",
+			//     "type": "image/png",
+			//     "sizes": "512x512"
+			// },
+			// {
+			//     "src": "./images/favicon-384.png",
+			//     "type": "image/png",
+			//     "sizes": "384x384"
+			// },
+			// {
+			//     "src": "./images/favicon-256.png",
+			//     "type": "image/png",
+			//     "sizes": "256x256"
+			// }, 
+			// {
+			//     "src": "./images/favicon-192.png",
+			//     "type": "image/png",
+			//     "sizes": "192x192"
+			// }, 
+			// {
+			//     "src": "./images/favicon-128.png",
+			//     "type": "image/png",
+			//     "sizes": "128x128"
+			// }, 
+			{
+			    "src": "./images/icons96PWA.png",
+			    "type": "image/png",
+			    "sizes": "96x96"
+			}
+			// {
+			//     "src": "./images/favicon-64.png",
+			//     "type": "image/png",
+			//     "sizes": "64x64"
+			// },
+			// {
+			//     "src": "./images/favicon-32.png",
+			//     "type": "image/png",
+			//     "sizes": "32x32"
+			// },
+			// {
+			//     "src": "./images/favicon-16.png",
+			//     "type": "image/png",
+			//     "sizes": "16x16"
+			// }
+
+		]
+}  
